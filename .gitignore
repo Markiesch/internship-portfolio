@@ -1,0 +1,12 @@
+# dependencies
+node_modules
+.idea
+.vscode
+
+# next.js
+.next/
+out/
+build
+
+# debug
+npm-debug.log*
