@@ -2,6 +2,7 @@ import Link from "next/link"
 
 import { siteConfig } from "@/config/site"
 import { buttonVariants } from "@/components/ui/button"
+import { HomeProjects } from "@/components/home/projects"
 import { Technologies } from "@/components/home/technologies"
 
 export default function IndexPage() {
@@ -35,6 +36,7 @@ export default function IndexPage() {
       </div>
       <div>
         <Technologies />
+        <HomeProjects />
       </div>
     </>
   )

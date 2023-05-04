@@ -1,11 +1,6 @@
 export type Project = {
   name: string
-  img: string
+  description: string
+  img: any
+  tags: string[]
 }
-
-export const projects: Project[] = [
-  {
-    name: "Project 1",
-    img: "/project1.png",
-  },
-]

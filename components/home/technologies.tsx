@@ -1,6 +1,8 @@
 import { LucideProps } from "lucide-react"
 
 import { Card } from "@/components/ui/card"
+import { SectionSubtitle } from "@/components/ui/section-subtitle"
+import { SectionTitle } from "@/components/ui/section-title"
 import { Icons } from "@/components/icons"
 
 type Technology = {
@@ -51,14 +53,12 @@ export function Technologies() {
 
   return (
     <div className="md:py-12 lg:py-24">
-      <h2 className="pb-4 font-heading text-3xl leading-[1.1] sm:text-3xl md:text-5xl">
-        Technologies
-      </h2>
-      <p className="max-w-[80ch] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
+      <SectionTitle>Technologies</SectionTitle>
+      <SectionSubtitle>
         During my internship at Ctrl Learning I have learned to work with new
         front- and back-end technologies. Here is an overview of which
         technologies I have used.
-      </p>
+      </SectionSubtitle>
 
       <div className="grid gap-4 pt-8 sm:grid-cols-2 md:grid-cols-3">
         {technologies.map((technology, index) => (
