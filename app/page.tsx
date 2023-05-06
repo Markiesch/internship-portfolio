@@ -8,31 +8,31 @@ import { Technologies } from "@/components/home/technologies"
 export default function IndexPage() {
   return (
     <>
-      <div className="flex max-w-[980px] flex-col items-start gap-2">
+      <div className="max-w-[980px] py-8 md:py-12 lg:py-24">
         <h1 className="text-3xl font-extrabold leading-tight tracking-tighter sm:text-3xl md:text-5xl lg:text-6xl">
           Portfolio internship Ctrl Learning
         </h1>
-        <p className="max-w-[700px] text-lg text-muted-foreground sm:text-xl">
+        <p className="max-w-[700px] pb-6 pt-4 text-lg text-muted-foreground sm:text-xl">
           This portfolio is to showcase the things a made during my second
           internship at Ctrl Learning
         </p>
-      </div>
-      <div className="flex gap-4">
-        <Link
-          href="projects"
-          rel="noreferrer"
-          className={buttonVariants({ size: "lg" })}
-        >
-          Projecten
-        </Link>
-        <Link
-          target="_blank"
-          rel="noreferrer"
-          href={siteConfig.links.github}
-          className={buttonVariants({ variant: "outline", size: "lg" })}
-        >
-          GitHub
-        </Link>
+        <div className="flex gap-2">
+          <Link
+            href="projects"
+            rel="noreferrer"
+            className={buttonVariants({ size: "lg" })}
+          >
+            Projecten
+          </Link>
+          <Link
+            target="_blank"
+            rel="noreferrer"
+            href={siteConfig.links.github}
+            className={buttonVariants({ variant: "outline", size: "lg" })}
+          >
+            GitHub
+          </Link>
+        </div>
       </div>
       <div>
         <Technologies />
