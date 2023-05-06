@@ -63,7 +63,7 @@ export function Technologies() {
       <div className="grid gap-4 pt-8 sm:grid-cols-2 md:grid-cols-3">
         {technologies.map((technology, index) => (
           <Card key={index} className="p-6">
-            {technology.icon({ className: "h-10 w-10 fill-white" })}
+            {technology.icon({ className: "h-10 w-10 fill-foreground" })}
             <h3 className="py-2 font-bold">{technology.name}</h3>
             <p className="text-sm text-muted-foreground">
               {technology.description}
