@@ -70,10 +70,28 @@
   }
 }
 
+.slide-in {
+  animation-name: slide-in;
+  animation-duration: 600ms;
+  animation-fill-mode: forwards;
+
+  transform: translateY(1rem);
+  opacity: 0;
+}
+
+@keyframes slide-in {
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 @layer base {
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
