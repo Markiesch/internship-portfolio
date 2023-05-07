@@ -79,6 +79,22 @@
   opacity: 0;
 }
 
+.slide-in-300 {
+  animation-delay: 300ms;
+}
+
+.slide-in-500 {
+  animation-delay: 500ms;
+}
+
+.slide-in-700 {
+  animation-delay: 700ms;
+}
+
+.slide-in-900 {
+  animation-delay: 900ms;
+}
+
 @keyframes slide-in {
 
   to {
