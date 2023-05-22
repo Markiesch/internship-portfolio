@@ -1,7 +1,8 @@
 import Image from "next/image"
+import Link from "next/link"
 
 import { Project } from "@/types/projects"
-import { Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button"
 
 type ProjectProps = {
   project: Project
@@ -18,7 +19,12 @@ export function ProjectCard(props: ProjectProps) {
         <p className="pb-4 text-muted-foreground">
           {props.project.description}
         </p>
-        <Button>Read case study</Button>
+        <Link
+          className={buttonVariants()}
+          href={`/projects/${props.project.url}`}
+        >
+          Read case study
+        </Link>
       </div>
     </div>
   )

@@ -1,5 +1,9 @@
+type Data = { type: "image", url: any } | { type: "title" | "text", text: string }
+
 export type Project = {
-  name: string
-  description: string
-  img: any
+  url: string;
+  name: string;
+  description: string;
+  img: any;
+  data?: Data[]
 }
