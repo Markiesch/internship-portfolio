@@ -3,7 +3,7 @@ export function SiteFooter() {
     <footer className="container flex justify-between py-8">
       <p>&copy; 2023 Mark Schuurmans</p>
       <p>
-        Illustrations by
+        Illustrations by{" "}
         <a className="underline" href="https://popsy.co/">
           popsy.co
         </a>
