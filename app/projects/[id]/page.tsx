@@ -1,6 +1,8 @@
 import Image from "next/image"
 import { projects } from "@/data/projects.data"
 
+import { Card } from "@/components/ui/card"
+
 export default function ProjectPage({ params }: { params: { id: string } }) {
   const project = projects.find((project) => project.url == params.id)
 
@@ -8,9 +10,9 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
     <>
       {project ? (
         <div className="mx-auto max-w-2xl">
-          <div className="mb-8 flex justify-center overflow-hidden rounded-lg bg-white">
+          <Card className="mb-8 flex justify-center overflow-hidden rounded-lg bg-white">
             <Image src={project.img} height={250} alt={project.name} />
-          </div>
+          </Card>
           <h1 className="pb-4 text-5xl font-bold">{project.name}</h1>
           <p className="text-muted-foreground">{project.description}</p>
 
@@ -21,9 +23,9 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
               ) : data.type == "text" ? (
                 <p className="pt-2 text-muted-foreground">{data.text}</p>
               ) : data.type == "image" ? (
-                <div className="mt-8 flex justify-center overflow-hidden rounded-lg bg-white p-4">
+                <Card className="mt-8 flex justify-center overflow-hidden rounded-lg bg-white p-4">
                   <Image src={data.url} alt="" />
-                </div>
+                </Card>
               ) : (
                 <></>
               )}
