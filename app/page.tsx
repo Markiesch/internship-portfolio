@@ -13,7 +13,7 @@ export default function IndexPage() {
           Portfolio internship Ctrl Learning
         </h1>
         <p className="slide-in slide-in-300 max-w-[700px] pb-6 pt-4 text-lg text-muted-foreground  sm:text-xl">
-          This portfolio is to showcase the things a made during my second
+          This portfolio is to showcase the things I have made during my second
           internship at Ctrl Learning
         </p>
         <div className="flex gap-2">
