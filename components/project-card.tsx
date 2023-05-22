@@ -1,31 +1,24 @@
 import Image from "next/image"
 
-import { Project } from "@/lib/projects"
-import { Card } from "@/components/ui/card"
+import { Project } from "@/types/projects"
+import { Button } from "@/components/ui/button";
 
 type ProjectProps = {
   project: Project
 }
 
-export default function ProjectCard(props: ProjectProps) {
+export function ProjectCard(props: ProjectProps) {
   return (
-    <div className="grid grid-cols-2 items-center gap-8">
-      <div>
-        <Image src={props.project.img} alt={props.project.img} />
+    <div>
+      <div className="flex justify-center overflow-hidden rounded-lg bg-white">
+        <Image src={props.project.img} height={350} alt={props.project.img} />
       </div>
-      <div>
+      <div className="pt-8">
         <h2 className="pb-2 font-heading text-4xl">{props.project.name}</h2>
         <p className="pb-4 text-muted-foreground">
           {props.project.description}
         </p>
-        {props.project.tags.map((tag, index) => (
-          <Card
-            className="pointer-events-none inline-block px-4 py-2"
-            key={index}
-          >
-            {tag}
-          </Card>
-        ))}
+        <Button>Read case study</Button>
       </div>
     </div>
   )
