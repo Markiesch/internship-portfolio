@@ -1,6 +1,8 @@
 import Image from "next/image"
+import Link from "next/link"
 import { projects } from "@/data/projects.data"
 
+import { buttonVariants } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 
 export default function ProjectPage({ params }: { params: { id: string } }) {
@@ -16,7 +18,7 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
           <h1 className="pb-4 text-5xl font-bold">{project.name}</h1>
           <p className="text-muted-foreground">{project.description}</p>
 
-          {project.data?.map((data) => (
+          {project.data.map((data) => (
             <>
               {data.type == "title" ? (
                 <h2 className="pt-8 text-3xl font-bold">{data.text}</h2>
@@ -33,7 +35,14 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
           ))}
         </div>
       ) : (
-        <></>
+        <>
+          <h1 className="text-4xl font-bold">Unable to find project</h1>
+          <div>
+            <Link href="/projects" className={buttonVariants()}>
+              All projects
+            </Link>
+          </div>
+        </>
       )}
     </>
   )
