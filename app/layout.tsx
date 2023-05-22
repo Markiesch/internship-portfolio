@@ -4,6 +4,7 @@ import { Metadata } from "next"
 import { siteConfig } from "@/config/site"
 import { fontHeading, fontSans } from "@/lib/fonts"
 import { cn } from "@/lib/utils"
+import { SiteFooter } from "@/components/site-footer"
 import { SiteHeader } from "@/components/site-header"
 import { ThemeProvider } from "@/components/theme-provider"
 
@@ -48,6 +49,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
                   {children}
                 </section>
               </div>
+              <SiteFooter />
             </div>
           </ThemeProvider>
         </body>

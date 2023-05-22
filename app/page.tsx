@@ -18,7 +18,7 @@ export default function IndexPage() {
         </p>
         <div className="flex gap-2">
           <Link
-            href="projects"
+            href="/projects"
             rel="noreferrer"
             className={
               buttonVariants({ size: "lg" }) + " slide-in slide-in-500"

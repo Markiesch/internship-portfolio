@@ -1,6 +1,7 @@
-import { LucideProps, Moon, SunMedium } from "lucide-react"
+import { ArrowRight, LucideProps, Moon, SunMedium } from "lucide-react"
 
 export const Icons = {
+  arrowRight: ArrowRight,
   sun: SunMedium,
   moon: Moon,
   node: (props: LucideProps) => (
